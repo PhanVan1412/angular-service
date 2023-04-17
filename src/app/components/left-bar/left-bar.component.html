@@ -1,0 +1,15 @@
+<section class="left-bar">
+    <div class="title">
+        <h4>Left bar</h4>
+    </div>
+    <div class="box-container">
+        <div class="heading" (click)="handleClickTitle($event)" value="Angular">Angular</div>
+        <div class="box-star"(click)="handleClickStar()">
+            <img src={{urlSrc}} />
+        </div>
+        <div class="check-box">
+            <label for="scales">check</label>
+            <input  (click)="handleClickCheck($event)" type="checkbox" id="checkId" name="check" />
+        </div>
+    </div>
+</section>
