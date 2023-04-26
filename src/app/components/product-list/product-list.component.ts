@@ -1,16 +1,24 @@
 import { Component } from '@angular/core';
 
-import { products } from '../../products';
-
 @Component({
-  selector: 'app-product-list',
+  selector: 'product-list-component',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = products;
-
-  share() {
-    window.alert('The product has been shared!');
+  public count: number = 0;
+  public isLove: boolean = false;
+  public numberLove: number = 0;
+  public totalCount: number;
+  constructor() { }
+  public getCount($event: any) {
+    this.count = $event;
+  }
+  public getIsLove($event: any) {
+    this.isLove = $event;
+  }
+  public onHandlePay() {
+    this.totalCount = this.count * 10000;
+    console.log(this.totalCount)
   }
 }

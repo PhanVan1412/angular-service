@@ -1,1 +1,22 @@
-<h2>Products</h2>
+<div class="wrapper">
+    <div class="box box-product-list">
+        <h2>Sản phẩm</h2>
+        <div class="box-product-detail">
+            <div class="count">{{count}}</div>
+        </div>
+        <button class="pay" (click)="onHandlePay()">Mua ngay</button>
+    </div>
+    <div class="box love-detail">
+        <h3>Sản phẩm yêu thích</h3>
+        <div class="box-love-detail">
+            <div class="count">{{isLove}}</div>
+        </div>
+    </div>
+</div>
+<div class="product-list">
+    <product-item-component 
+        (numberEvent)="getCount($event)"  
+        (isLoveEvent)="getIsLove($event)" 
+        [totalCountEvent]="totalCount">
+    </product-item-component>
+</div>

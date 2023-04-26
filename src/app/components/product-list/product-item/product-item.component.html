@@ -1,0 +1,13 @@
+<div class="box-list">
+    <div class="box-item">
+        <h3 class="heading">Iphone 6S</h3>
+        <div class="description">Iphone chính hãng</div>
+        <div class="price">
+            Số lượng 
+            <span (click)="onAdd()">+</span>
+            <span (click)="onRemove()">-</span>
+        </div>
+        <img [src]="urlImage" alt="" class="heart" (click)="onHandleLove()">
+        <div *ngIf="totalCountEvent" class="total-pirce">Total: {{totalCountEvent}} vnd</div>
+    </div>
+</div>

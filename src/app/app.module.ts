@@ -8,7 +8,10 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
+
 import { ComponentShareService } from './service/component-share.service';
+
 
 
 @NgModule({
@@ -24,7 +27,8 @@ import { ComponentShareService } from './service/component-share.service';
     AppComponent,
     TopBarComponent,
     LeftBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductItemComponent,
   ],
   bootstrap: [
     AppComponent
